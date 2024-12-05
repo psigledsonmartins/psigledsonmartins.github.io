@@ -7,6 +7,16 @@ export default {
   },
   plugins: [daisyui],
   daisyui: {
-    themes: ["light", "dark", "cupcake"],
+    themes: ["light", "dark", "cupcake",
+      {
+        mytheme: {
+          "primary": "#81b29a",
+          "secondary": "#f2cc8f",
+          "accent": "#e07a5f",
+          "neutral": "#3d405b",
+          "base-100": "#f4f1de",
+        },
+      },
+    ],
   },
 };

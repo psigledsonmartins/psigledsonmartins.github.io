@@ -1,31 +1,46 @@
 ---
 import { Icon } from "astro-icon/components";
 ---
-<div class="z-50 sticky">
+<div class="z-50 fixed flex justify-center pt-2 w-screen bg-base-100 px-2">
+  <div class="max-w-[1200px] w-full">
   <div class="w-full flex justify-between">
-    <div class="font-bold titulos-header">LOGO</div>
+    <a class="font-bold titulos-header" href="/">LOGO</a>
     <div class="font-bold titulos-header hidden md:flex" style="font-size: 2rem;">
-      <button class="btn btn-ghost">Tópico 1</button>
-      <button class="btn btn-ghost">Tópico 2</button>
-      <button class="btn btn-outline rounded-md">Destaque</button>
+      <a class="btn btn-ghost" href="/#topico1">Tópico 1</a>
+      <a class="btn btn-ghost" href="/#topico2">Tópico 2</a>
+      <a class="btn btn-outline rounded-md text-accent mx-2" href="/#destaque">Destaque</a>
+      <a class="btn btn-outline rounded-md text-yellow-700" href="/#agendar">Agendar</a>
     </div>
     <div class="drawer drawer-end md:hidden">
       <input id="menu-lateral" type="checkbox" class="drawer-toggle" />
       <div class="flex justify-end">
-        <label for="menu-lateral" class="drawer-button btn btn-ghost titulos-header block md:hidden pt-2"><Icon name="mdi:menu"/></label>
+        <label for="menu-lateral" class="drawer-a btn btn-ghost titulos-header block md:hidden pt-2" id="btn-close"><Icon name="mdi:menu"/></label>
       </div>
       <div class="drawer-side">
         <label for="menu-lateral" aria-label="close sidebar" class="drawer-overlay"></label>
         <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-          <button class="btn btn-ghost">Tópico 1</button>
-          <button class="btn btn-ghost">Tópico 2</button>
-          <button class="btn btn-outline rounded-md">Destaque</button>
+          <a class="btn btn-ghost btn-menu" href="/#topico1" >Tópico 1 </a>
+          <a class="btn btn-ghost btn-menu" href="/#topico2" >Tópico 2</a>
+          <a class="btn btn-outline rounded-md text-accent my-2 btn-menu" href="/#destaque" >Destaque</a>
+          <a class="btn btn-outline rounded-md text-yellow-700 btn-menu" href="/#agendar" >Agendar</a>
         </ul>
       </div>
     </div>
   </div> 
-  <div class="divider mt-2"/>
+  <div class="divider mt-2 mb-0 pb-0 h-auto"/>
+    </div>
 </div>
+<script>
+const btns = document.querySelectorAll(".btn-menu");
+const close = document.querySelector("#btn-close")
+
+btns.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      close.click()
+    });
+});
+
+</script>
 <style>
 .titulos-header{
   font-size: 2rem;
