@@ -30,7 +30,7 @@ import Footer from "../components/Footer.astro";
   </body>
 </html>
 
-<style>
+<style is:global>
   html,
   body {
     margin: 0;
@@ -44,5 +44,11 @@ import Footer from "../components/Footer.astro";
   }
   .text-secondary-dark {
     color: #b0a03b;
+  }
+  .bg-primary-light {
+    background-color: #64a083;
+  }
+  .bg-secondary-dark {
+    background-color: #e59b25;
   }
 </style>
