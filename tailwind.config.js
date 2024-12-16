@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        caveat: ["Caveat", "cursive"],
+        roboto: ["Roboto Condensed", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },
