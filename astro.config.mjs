@@ -8,7 +8,7 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   // base: "",
-  site: "https://garecot.github.io",
+  site: "psigledsonmartins.github.io",
 
   integrations: [tailwind(), icon()],
 });
