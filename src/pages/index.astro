@@ -318,23 +318,7 @@ import Layout from "../layouts/Layout.astro";
     duration: 1200,
   });
   const stickyElm = document.querySelector("#inicio_verde");
-  //
-  // const observer = new IntersectionObserver(
-  //   ([
-  //     e,
-  //   ]) => /*e.target.classList.toggle("isSticky", e.intersectionRatio < 1)*/ {
-  //     console.log(stickyElm.getBoundingClientRect().height);
-  //     if (e.isIntersecting) {
-  //       document.querySelector("#navbar").classList.remove("bg-primary");
-  //     } else {
-  //       document.querySelector("#navbar").classList.add("bg-primary");
-  //     }
-  //   },
-  //   { root: null, threshold: 0, rootMargin: `-${stickyElm?.getBoundingClientRect().height + 100}px` },
-  // );
-  //
-  // observer.observe(stickyElm);
-  //
+
   if (window.scrollY <= stickyElm?.getBoundingClientRect().height) {
       document.querySelector("#navbar").classList.add("bg-primary");
       document.querySelector("#navbar").classList.add("text-white");
