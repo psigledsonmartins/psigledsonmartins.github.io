@@ -27,9 +27,10 @@ import Layout from "../layouts/Layout.astro";
       </p>
       <p class="pt-10 text-justify text-lg md:text-xl indent-5">
         Atuo como psicólogo clínico online, integrando práticas da
-        Esquizoanálise e da Psicanálise. Minha abordagem busca compreender os
+        Esquizoanálise e da Psicanálise. Nessa abordagem busca-se compreender os
         fluxos de forças que moldam a subjetividade, auxiliando as pessoas a
-        explorar novos caminhos e possibilidades de vida.
+        explorar novos caminhos e possibilidades de vida tanto histórica
+        (psicanálise) quanto geograficamente (esquizoanálise).
       </p>
     </div>
   </div>
@@ -69,13 +70,13 @@ import Layout from "../layouts/Layout.astro";
               O que faço como esquizonalista?
             </p>
             <p class="text-justify indent-5">
-              Quando alguém me pergunta o que faço como psicólogo, prefiro dizer
+              Quando alguém me pergunta o que faço como clínico, prefiro dizer
               que não sou um "intérprete de mentes", mas alguém que observa
               fluxos de forças. Minha prática não busca “curar” no sentido
               tradicional, como se as pessoas fossem máquinas quebradas que
               precisam de conserto. Em vez disso, sigo um caminho
               esquizonalista: mapeando, compreendendo e, sobretudo, liberando os
-              fluxos de forças que compõem nossas vidas.
+              fluxos de forças vitais e sociais que compõem nossas vidas.
             </p>
           </div>
         </div>
@@ -97,20 +98,22 @@ import Layout from "../layouts/Layout.astro";
             <div class="w-full text-neutral text-justify">
               <p class="w-full indent-5">
                 Não nos limitamos à visão convencional que reduz a psicologia à
-                organização rígida de estruturas familiares ou à
+                organização rígida de estruturas familiares, cognitivas ou à
                 individualização excessiva do sofrimento. Nossa abordagem
                 enxerga a força produtiva e criativa presente em tudo o que
                 fazemos, mas que muitas vezes é capturada e codificada por
-                sistemas como o capitalismo ou a moralidade.
+                sistemas políticos, ideológicos, morais e econômicos que nos
+                aprisionam em atuomatismos, repetições e angústias.
               </p>
               <p class="pt-5 w-full indent-5">
                 Por exemplo, pense na relação de alguém com o trabalho. Não
                 interpretamos isso apenas como um problema de estresse
                 individual ou más escolhas. Vemos como um campo onde máquinas
                 diversas — econômicas, sociais e afetivas — se interligam,
-                criando tensões, desejos e, por vezes, bloqueios. O trabalho,
-                nesse sentido, não é algo externo à pessoa, mas participa
-                diretamente de sua produção subjetiva.
+                criando tensões, desejos e, por vezes, bloqueios (angústias,
+                ansiedades, depressões, neuroses, psicoses, entre outras formas
+                de sofrimento). O trabalho, nesse sentido, não é algo externo à
+                pessoa, mas participa diretamente de sua produção subjetiva.
               </p>
             </div>
           </div>
@@ -323,9 +326,7 @@ import Layout from "../layouts/Layout.astro";
   //Mudar cor da navbar
   const inicio_verde = document.querySelector("#inicio_verde");
   const observer = new IntersectionObserver(
-    ([
-      e,
-    ]) => {
+    ([e]) => {
       if (e.isIntersecting) {
         document.querySelector("#navbar").classList.add("bg-primary");
         document.querySelector("#navbar").classList.add("text-white");
@@ -349,7 +350,6 @@ import Layout from "../layouts/Layout.astro";
   );
 
   observer.observe(inicio_verde);
-
 </script>
 <style>
   .clip-svg {
